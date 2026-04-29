@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500&display=swap');
+
+:root {
+  --cream: #F7EFE5;
+  --pink: #E85D8F;
+  --dusty-pink: #C96D88;
+  --burgundy: #5A1F2E;
+  --gold: #C9A24A;
+  --charcoal: #1F1A17;
+  --moss-green: #6F7D5D;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--cream);
+  color: var(--charcoal);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cormorant Garamond', serif;
+  color: var(--charcoal);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+
+/* Utilities */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.section {
+  padding: 8rem 0;
+  position: relative;
+}
+
+/* Typography Enhancements */
+.headline-hero {
+  font-size: clamp(3.5rem, 8vw, 6rem);
+  color: var(--burgundy);
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}
+
+.text-accent {
+  color: var(--pink);
+}
+
+.text-burgundy {
+  color: var(--burgundy);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.8rem 2rem;
+  border-radius: 4px; /* Not too soft */
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  border: 1px solid transparent;
+  position: relative;
+}
+
+.btn-primary {
+  background: var(--pink);
+  color: var(--cream);
+  border: 1px solid var(--burgundy);
+  box-shadow: 2px 2px 0 var(--burgundy);
+}
+
+.btn-primary:hover {
+  background: var(--burgundy);
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0 var(--gold);
+}
+
+.btn-secondary {
+  background: var(--cream);
+  color: var(--burgundy);
+  border: 1px solid var(--burgundy);
+  box-shadow: 2px 2px 0 var(--charcoal);
+}
+
+.btn-secondary:hover {
+  background: var(--cream);
+  color: var(--charcoal);
+  border-color: var(--charcoal);
+  box-shadow: 4px 4px 0 var(--gold);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--charcoal);
+  border-bottom: 2px solid var(--dusty-pink);
+  padding: 0.5rem 0;
+  border-radius: 0;
+}
+
+.btn-outline:hover {
+  color: var(--burgundy);
+  border-color: var(--gold);
+}
+
+/* Navbar */
+.navbar {
+  padding: 2rem 0;
+  border-bottom: 1px solid rgba(31, 26, 23, 0.1);
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav-link {
+  color: var(--charcoal);
+  text-decoration: none;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: var(--pink);
+}
+
+/* Hero Section */
+.hero {
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  background-image: 
+    radial-gradient(var(--gold) 1px, transparent 1px),
+    radial-gradient(var(--dusty-pink) 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-position: 0 0, 20px 20px;
+  background-color: var(--cream);
+}
+
+.hero-content {
+  background: var(--cream);
+  padding: 3rem;
+  border: 1px solid var(--charcoal);
+  box-shadow: 8px 8px 0 var(--dusty-pink);
+  max-width: 800px;
+}
+
+/* Cards & Gallery Frames */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+}
+
+.art-card {
+  background: var(--cream);
+  border: 1px solid var(--charcoal);
+  padding: 1rem;
+  box-shadow: 6px 6px 0 var(--moss-green);
+  transition: all 0.3s ease;
+}
+
+.art-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 10px 10px 0 var(--gold);
+}
+
+.art-image-placeholder {
+  width: 100%;
+  aspect-ratio: 4/5;
+  background: var(--charcoal);
+  border: 1px solid var(--charcoal);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--cream);
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+}
+
+/* Services */
+.service-card {
+  background: var(--cream);
+  border: 1px solid var(--burgundy);
+  padding: 3rem 2rem;
+  border-top: 6px solid var(--dusty-pink);
+  box-shadow: 4px 4px 0 rgba(90, 31, 46, 0.1);
+}
+
+.service-price {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  color: var(--pink);
+  margin: 1rem 0;
+  font-style: italic;
+}
+
+/* Asymmetrical layout helper */
+.asymmetric-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.about-box {
+  background: var(--burgundy);
+  color: var(--cream);
+  padding: 4rem;
+  position: relative;
+}
+
+.about-box h2 {
+  color: var(--gold);
+}
+
+.about-box::after {
+  content: '';
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  bottom: 15px;
+  left: 15px;
+  border: 1px solid var(--pink);
+  z-index: -1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .asymmetric-grid { grid-template-columns: 1fr; }
+  .section { padding: 4rem 0; }
+  .headline-hero { font-size: 3rem; }
+  .nav-links { display: none; }
+}
