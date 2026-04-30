@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 
 :root {
-  --bg-dark: #121212;
+  --bg-pink: #FFB6C1; /* Bubble gum pink */
   --punchy-pink: #FF0055;
   --mint-green: #00FA9A;
-  --text-light: #f4f4f4;
-  --card-bg: #1a1a1a;
-  --darker-bg: #0a0a0a;
+  --text-dark: #111111;
+  --card-bg: #FFFFFF;
+  --charcoal: #111111;
 }
 
 * {
@@ -17,8 +17,8 @@
 
 body {
   font-family: 'Space Grotesk', sans-serif;
-  background-color: var(--bg-dark);
-  color: var(--text-light);
+  background-color: var(--bg-pink);
+  color: var(--text-dark);
   line-height: 1.6;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
@@ -26,7 +26,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Abril Fatface', serif;
-  color: var(--text-light);
+  color: var(--text-dark);
   font-weight: 400;
   line-height: 1.1;
   letter-spacing: 0.02em;
@@ -47,9 +47,10 @@ h1, h2, h3, h4, h5, h6 {
 /* Typography Enhancements */
 .headline-hero {
   font-size: clamp(4rem, 8vw, 7rem);
-  color: var(--mint-green);
+  color: var(--text-dark);
   margin-bottom: 1.5rem;
   line-height: 1;
+  text-shadow: 4px 4px 0 var(--mint-green);
 }
 
 .text-accent {
@@ -79,21 +80,21 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-primary {
-  background: var(--punchy-pink);
-  color: #fff;
-  border: 2px solid var(--punchy-pink);
-  box-shadow: 6px 6px 0 var(--mint-green);
+  background: var(--charcoal);
+  color: var(--mint-green);
+  border: 2px solid var(--charcoal);
+  box-shadow: 6px 6px 0 var(--punchy-pink);
 }
 
 .btn-primary:hover {
   transform: translate(2px, 2px);
-  box-shadow: 4px 4px 0 var(--mint-green);
+  box-shadow: 4px 4px 0 var(--punchy-pink);
 }
 
 .btn-secondary {
-  background: transparent;
-  color: var(--mint-green);
-  border: 2px solid var(--mint-green);
+  background: var(--mint-green);
+  color: var(--charcoal);
+  border: 2px solid var(--charcoal);
   box-shadow: 6px 6px 0 var(--punchy-pink);
 }
 
@@ -104,22 +105,22 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn-outline {
   background: transparent;
-  color: var(--text-light);
+  color: var(--charcoal);
   border-bottom: 3px solid var(--punchy-pink);
   padding: 0.5rem 0;
   border-radius: 0;
 }
 
 .btn-outline:hover {
-  color: var(--mint-green);
-  border-color: var(--mint-green);
+  color: var(--punchy-pink);
+  border-color: var(--charcoal);
 }
 
 /* Navbar */
 .navbar {
   padding: 2rem 0;
-  border-bottom: 2px solid var(--card-bg);
-  background-color: var(--bg-dark);
+  border-bottom: 3px solid var(--charcoal);
+  background-color: var(--bg-pink);
 }
 
 .nav-links {
@@ -129,11 +130,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-link {
-  color: var(--text-light);
+  color: var(--charcoal);
   text-decoration: none;
   font-family: 'Space Grotesk', sans-serif;
   font-size: 1.1rem;
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
   transition: color 0.3s;
 }
@@ -148,17 +149,17 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   align-items: center;
   background-image: 
-    linear-gradient(var(--card-bg) 2px, transparent 2px),
-    linear-gradient(90deg, var(--card-bg) 2px, transparent 2px);
+    linear-gradient(var(--punchy-pink) 2px, transparent 2px),
+    linear-gradient(90deg, var(--punchy-pink) 2px, transparent 2px);
   background-size: 50px 50px;
   background-position: -2px -2px;
-  background-color: var(--bg-dark);
+  background-color: var(--bg-pink);
 }
 
 .hero-content {
-  background: var(--bg-dark);
+  background: var(--card-bg);
   padding: 3rem;
-  border: 4px solid var(--text-light);
+  border: 4px solid var(--charcoal);
   box-shadow: 12px 12px 0 var(--punchy-pink);
   max-width: 800px;
 }
@@ -172,7 +173,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .art-card {
   background: var(--card-bg);
-  border: 3px solid var(--text-light);
+  border: 3px solid var(--charcoal);
   padding: 1rem;
   box-shadow: 8px 8px 0 var(--mint-green);
   transition: all 0.2s ease;
@@ -186,13 +187,13 @@ h1, h2, h3, h4, h5, h6 {
 .art-image-placeholder {
   width: 100%;
   aspect-ratio: 4/5;
-  background: var(--darker-bg);
-  border: 2px solid var(--punchy-pink);
+  background: var(--bg-pink);
+  border: 2px solid var(--charcoal);
   margin-bottom: 1.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--mint-green);
+  color: var(--charcoal);
   font-family: 'Abril Fatface', serif;
   font-size: 1.5rem;
 }
@@ -200,10 +201,10 @@ h1, h2, h3, h4, h5, h6 {
 /* Services */
 .service-card {
   background: var(--card-bg);
-  border: 3px solid var(--mint-green);
+  border: 3px solid var(--charcoal);
   padding: 3rem 2rem;
   border-top: 8px solid var(--punchy-pink);
-  box-shadow: 8px 8px 0 var(--text-light);
+  box-shadow: 8px 8px 0 var(--mint-green);
 }
 
 .service-price {
@@ -222,8 +223,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .about-box {
-  background: var(--darker-bg);
-  color: var(--text-light);
+  background: var(--charcoal);
+  color: var(--card-bg);
   padding: 4rem;
   border: 3px solid var(--mint-green);
   position: relative;
@@ -240,7 +241,7 @@ h1, h2, h3, h4, h5, h6 {
   right: -15px;
   bottom: -15px;
   left: 15px;
-  border: 3px solid var(--text-light);
+  border: 3px solid var(--charcoal);
   z-index: -1;
 }
 
